@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 280px;
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    h3 {
+      margin-top: 0;
+      color: #333;
+      font-size: 16px;
+    }
+    .input-group {
+      margin-bottom: 12px;
+    }
+    input[type="password"], input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .meter {
+      height: 8px;
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .meter-fill {
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+    .feedback {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+    li.valid {
+      color: green;
+    }
+    .toggle-pass {
+      font-size: 11px;
+      color: #0066cc;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Seguridad de Contraseña</h3>
+  
+  <div class="input-group">
+    <input type="password" id="password" placeholder="Introduce tu contraseña">
+    <span class="toggle-pass" id="toggleVisibility">Mostrar contraseña</span>
+  </div>
+
+  <div class="meter">
+    <div class="meter-fill" id="meterFill"></div>
+  </div>
+
+  <div class="feedback" id="feedbackText">Nivel: -</div>
+
+  <ul id="requirements">
+    <li id="req-length">Mínimo 8 caracteres</li>
+    <li id="req-upper">Al menos una mayúscula</li>
+    <li id="req-lower">Al menos una minúscula</li>
+    <li id="req-number">Al menos un número</li>
+    <li id="req-special">Al menos un carácter especial (!@#$%^&*)</li>
+  </ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>

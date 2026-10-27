@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Comprobador de Seguridad de Contraseñas",
+  "version": "1.0",
+  "description": "Comprueba la fortaleza y seguridad de tus contraseñas en tiempo real.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}
